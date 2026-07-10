@@ -1,4 +1,4 @@
-const CACHE_NAME = "glohq-premium-pwa-v2";
+const CACHE_NAME = "glohq-premium-pwa-v3";
 const PRECACHE_ASSETS = [
   "./",
   "./index.html",

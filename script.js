@@ -3,7 +3,6 @@ const sections = [...new Set(navLinks.map((link) => link.getAttribute("href")))]
   .map((href) => document.querySelector(href))
   .filter(Boolean);
 
-const approvedAdmins = new Set(["deckcadence52@gmail.com", "rawwaymg@gmail.com"]);
 const mascotLines = [
   "First came hip hop... then came the collection!",
   "How many MixKeys in your collection?",
@@ -20,7 +19,6 @@ const mascotLines = [
 ];
 
 let mascotTimer;
-let builderStep = "locked";
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -139,8 +137,8 @@ const floatReaction = (button) => {
 const setupSignup = () => {
   const form = $("#famzSignupForm");
   const status = $("#signupStatus");
-  const otherToggle = $("#interestOther");
-  const otherField = $("#otherInterest");
+  const otherToggle = $("#otherInterestToggle");
+  const otherField = $("#otherInterestField");
   if (!form) return;
 
   otherToggle?.addEventListener("change", () => {
@@ -174,51 +172,15 @@ const setupSignup = () => {
     showMascot("Ay, tap in, never tap out!");
 
     if (data.get("creatorWaitlist") === "on") {
-      const subject = encodeURIComponent("GLOHQ Creator Waiting List");
-      const body = encodeURIComponent(`Profile: ${displayName}\nHandle: @${username}\nEmail: ${email}\nInterests: ${interests.join(", ")}`);
-      window.location.href = `mailto:deckcadence52@gmail.com?subject=${subject}&body=${body}`;
-    }
-  });
-};
-
-const setupAdmin = () => {
-  const form = $("#adminLoginForm");
-  const status = $("#adminStatus");
-  const matchupStatus = $("#matchupStatus");
-  if (!form) return;
-
-  const activateAdmin = (email) => {
-    document.body.classList.add("admin-mode");
-    builderStep = "ready";
-    try {
-      localStorage.setItem("glohqAdminMode", "active");
-      localStorage.setItem("glohqAdminEmail", email);
-    } catch {}
-    if (status) status.textContent = "Owner/Admin HQ unlocked on this device.";
-    if (matchupStatus) matchupStatus.textContent = "Admin controls ready. Use Edit, Save, then Confirm.";
-    showMascot("Owner controls unlocked. Move clean.");
-  };
-
-  try {
-    if (localStorage.getItem("glohqAdminMode") === "active") activateAdmin(localStorage.getItem("glohqAdminEmail") || "");
-  } catch {}
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const email = String(new FormData(form).get("adminEmail") || "").trim().toLowerCase();
-    if (approvedAdmins.has(email)) {
-      activateAdmin(email);
-    } else if (status) {
-      status.textContent = "Admin access not available for this email.";
-      showMascot("That door needs the right key.");
+      if (status) {
+        status.textContent += " Co-Lab interest marked for the next creator access wave.";
+      }
     }
   });
 };
 
 const setupGoatRoom = () => {
   const countdown = $("#arenaCountdown");
-  const form = $("#matchupBuilder");
-  const status = $("#matchupStatus");
   const chatForm = $("#goatChatForm");
   const chatFeed = $("#goatChatFeed");
 
@@ -254,28 +216,6 @@ const setupGoatRoom = () => {
     });
   });
 
-  form?.addEventListener("click", (event) => {
-    const action = event.target.closest("[data-builder-action]")?.dataset.builderAction;
-    if (!action) return;
-    if (!document.body.classList.contains("admin-mode")) {
-      if (status) status.textContent = "Admin login required before matchup edits.";
-      return;
-    }
-    if (action === "edit") {
-      builderStep = "editing";
-      if (status) status.textContent = "Editing enabled. Save before confirm.";
-    }
-    if (action === "save" && builderStep === "editing") {
-      builderStep = "saved";
-      if (status) status.textContent = "Matchup saved locally. Confirm when ready.";
-    }
-    if (action === "confirm" && builderStep === "saved") {
-      builderStep = "confirmed";
-      if (status) status.textContent = "Matchup queued for the GOAT Conversations room.";
-      showMascot("Battle taking place. Don't miss it!");
-    }
-  });
-
   chatForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     const input = chatForm.querySelector("input");
@@ -308,7 +248,6 @@ window.addEventListener("hashchange", () => {
 setActiveLink();
 runSplash();
 setupSignup();
-setupAdmin();
 setupGoatRoom();
 
 window.addEventListener("scroll", () => {

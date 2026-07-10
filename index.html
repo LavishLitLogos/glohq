@@ -50,7 +50,6 @@
         <a href="#vault"><img src="./assets/icons/vaultlogo.png" alt="" />Vault</a>
         <a href="#goat"><img src="./assets/icons/battledeck.png" alt="" />GOAT</a>
         <a href="#signup"><img src="./assets/icons/profile.png" alt="" />Sign Up</a>
-        <a href="#admin"><img src="./assets/icons/vip.png" alt="" />Admin</a>
       </nav>
     </header>
 
@@ -120,14 +119,14 @@
               </div>
             </div>
             <p class="section-copy">
-              FAMZ accounts are for exploring, collecting, reacting, commenting, sharing, and tapping into creators,
-              rooms, and drops across the mansion.
+              Visitors can explore approved rooms, listen, watch, browse collectibles, discover creators, and learn the
+              mansion. FAMZ accounts unlock deeper participation as rooms open: reactions, comments, voting, collecting,
+              messaging, sharing, debates, polls, and creator-space engagement.
             </p>
           </div>
           <form class="profile-form" id="famzSignupForm">
             <div class="form-grid">
-              <label>Email<input name="email" type="email" autocomplete="email" required /></label>
-              <label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" required /></label>
+              <label>Email for signup updates<input name="email" type="email" autocomplete="email" required /></label>
               <label>Username<input name="username" maxlength="18" placeholder="@handle" required /></label>
               <label>Display name<input name="displayName" maxlength="18" required /></label>
               <label>Profile photo<input name="profilePhoto" type="file" accept="image/*" /></label>
@@ -153,7 +152,7 @@
               <input type="checkbox" name="creatorWaitlist" />
               Join the Co-Lab as an Artist or Creator
             </label>
-            <button class="primary-cta" type="submit"><img src="./assets/icons/profile.png" alt="" />Create FAMZ Profile</button>
+            <button class="primary-cta" type="submit"><img src="./assets/icons/profile.png" alt="" />Start FAMZ Profile</button>
             <p class="feed-status" id="signupStatus">FAMZ signup ready.</p>
           </form>
         </div>
@@ -435,7 +434,7 @@
           <div class="arena-stage">
             <article class="glotape-slot">
               <span>GLOTape A</span>
-              <strong>Queued by Admin</strong>
+              <strong>Next Matchup Slot</strong>
               <p>Tidbits, linked songs, reactions, votes, comments, and share actions live here when a matchup drops.</p>
             </article>
             <div class="arena-core">
@@ -444,7 +443,7 @@
             </div>
             <article class="glotape-slot">
               <span>GLOTape B</span>
-              <strong>Queued by Admin</strong>
+              <strong>Next Matchup Slot</strong>
               <p>Each matchup runs 24 hours, locks votes, archives results, then resets the room for the next drop.</p>
             </article>
           </div>
@@ -462,46 +461,6 @@
               <button type="submit"><img src="./assets/icons/messages.png" alt="" />Post</button>
             </form>
           </div>
-          <form class="arena-admin" id="matchupBuilder">
-            <p class="eyebrow">Admin Matchup Builder</p>
-            <div class="form-grid">
-              <label>Matchup title<input name="matchupTitle" placeholder="Who owns the moment?" /></label>
-              <label>Publish date/time<input name="publishAt" type="datetime-local" /></label>
-              <label>GLOTape A<input name="glotapeA" type="file" accept="image/*,video/*" /></label>
-              <label>GLOTape B<input name="glotapeB" type="file" accept="image/*,video/*" /></label>
-            </div>
-            <label>Debate setup<textarea name="debateSetup" maxlength="420"></textarea></label>
-            <div class="confirm-flow">
-              <button type="button" data-builder-action="edit">Edit</button>
-              <button type="button" data-builder-action="save">Save</button>
-              <button type="button" data-builder-action="confirm">Confirm</button>
-            </div>
-            <p class="feed-status" id="matchupStatus">Builder locked until admin login.</p>
-          </form>
-        </div>
-      </section>
-
-      <section class="profile-admin section-band" id="admin" aria-labelledby="admin-title">
-        <div class="section-shell two-column">
-          <div>
-            <div class="section-heading icon-heading compact-heading">
-              <img src="./assets/icons/vip.png" alt="" />
-              <div>
-                <p class="eyebrow">Owner/Admin</p>
-                <h2 id="admin-title">Mobile-first HQ control.</h2>
-              </div>
-            </div>
-            <p class="section-copy">
-              Admin access is separate from public FAMZ signup. Uploads, room management, moderation, publishing,
-              archiving, and destructive actions stay inside the protected HQ flow.
-            </p>
-          </div>
-          <form class="admin-card" id="adminLoginForm">
-            <label>Admin email<input name="adminEmail" type="email" autocomplete="email" required /></label>
-            <label>Password<input name="adminPassword" type="password" autocomplete="current-password" required /></label>
-            <button class="primary-cta" type="submit"><img src="./assets/icons/vip.png" alt="" />Enter Admin HQ</button>
-            <p class="feed-status" id="adminStatus">Primary admin login: deckcadence52@gmail.com</p>
-          </form>
         </div>
       </section>
 
