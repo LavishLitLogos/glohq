@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Deckcadence52 HQ - the official front door to a collectibles and culture ecosystem powered by GLOKEY."
+    />
+    <meta name="theme-color" content="#050507" />
+    <title>Deckcadence52 HQ | Where Legends Are Already Dealt</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="./assets/dc52-hq-hero.png" as="image" />
+    <script>
+      document.documentElement.classList.add("splash-pending");
+      try {
+        if (localStorage.getItem("glohqSplashVisits")) document.documentElement.classList.add("splash-quick");
+      } catch {}
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="vault-splash" id="vaultSplash" aria-hidden="true">
+      <div class="vault-orbit"></div>
+      <img src="./assets/icons/vaultlogo.png" alt="" />
+      <strong>GLOHQ</strong>
+      <span>Unlocking the mansion...</span>
+    </div>
+
+    <aside class="mascot-guide" id="mascotGuide" aria-live="polite" aria-hidden="true">
+      <img src="./assets/icons/ripkanos.svg" alt="" />
+      <p id="mascotLine">First came hip hop... then came the collection!</p>
+    </aside>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Site header">
+      <a class="brand-lockup" href="#hero" aria-label="Deckcadence52 home">
+        <img class="brand-icon" src="./assets/icons/vaultlogo.png" alt="" />
+        <span>
+          <strong>Deckcadence52&trade;</strong>
+          <small>Powered by GLOKEY&trade;</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#deck"><img src="./assets/icons/discover.png" alt="" />The Deck</a>
+        <a href="#cards"><img src="./assets/icons/collection.png" alt="" />Cards</a>
+        <a href="#sound"><img src="./assets/icons/glotapeicon.png" alt="" />Sound</a>
+        <a href="#vault"><img src="./assets/icons/vaultlogo.png" alt="" />Vault</a>
+        <a href="#goat"><img src="./assets/icons/battledeck.png" alt="" />GOAT</a>
+        <a href="#signup"><img src="./assets/icons/profile.png" alt="" />Sign Up</a>
+        <a href="#admin"><img src="./assets/icons/vip.png" alt="" />Admin</a>
+      </nav>
+    </header>
+
+    <nav class="mobile-dock" aria-label="Mobile navigation">
+      <a href="#hero"><img src="./assets/icons/home.png" alt="" /><span>Home</span></a>
+      <a href="#deck"><img src="./assets/icons/discover.png" alt="" /><span>Discover</span></a>
+      <a href="#cards"><img src="./assets/icons/collection.png" alt="" /><span>Collect</span></a>
+      <a href="#vault"><img src="./assets/icons/famz.png" alt="" /><span>Famz</span></a>
+      <a href="#clubtags"><img src="./assets/icons/clubtag.png" alt="" /><span>Tags</span></a>
+      <a href="#signup"><img src="./assets/icons/profile.png" alt="" /><span>Join</span></a>
+    </nav>
+
+    <main id="main">
+      <section class="hero section-band" id="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-art"
+          src="./assets/dc52-hq-hero.png"
+          alt="A neon collector vault entrance with trading cards, music, comic, game, and creator-tool energy."
+        />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Collectibles & Culture</p>
+          <h1 id="hero-title">WELCOME TO THE DECK.</h1>
+          <p class="tagline">Where Legends Are Already Dealt.</p>
+          <ul class="signal-list" aria-label="Deckcadence52 universe pillars">
+            <li>Cards</li>
+            <li>Music</li>
+            <li>Comics</li>
+            <li>Games</li>
+            <li>Creator Tools</li>
+            <li>Culture</li>
+            <li>Community</li>
+          </ul>
+          <a class="primary-cta" href="#deck" aria-label="Enter the Deck">
+            <img src="./assets/icons/dropkey.png" alt="" />
+            ENTER THE DECK
+          </a>
+          <a class="ghost-cta" href="#signup" aria-label="Create a FAMZ account">
+            <img src="./assets/icons/famz.png" alt="" />
+            JOIN AS FAMZ
+          </a>
+          <p class="powered">Powered by GLOKEY&trade;.</p>
+        </div>
+      </section>
+
+      <section class="intro section-band" id="what" aria-labelledby="what-title">
+        <div class="section-shell two-column">
+          <div>
+            <p class="eyebrow">What Is DC52?</p>
+            <h2 id="what-title">A creator-powered universe built around collectibles and culture.</h2>
+          </div>
+          <p class="section-copy">
+            Deckcadence52&trade; is the HQ where cards, music, comics, games, tools, and community connect into one
+            living ecosystem. Not a store. Not a feed. The front door.
+          </p>
+        </div>
+      </section>
+
+      <section class="signup-room section-band room-panel" id="signup" aria-labelledby="signup-title">
+        <div class="section-shell two-column">
+          <div>
+            <div class="section-heading icon-heading compact-heading">
+              <img src="./assets/icons/famz.png" alt="" />
+              <div>
+                <p class="eyebrow">FAMZ Access</p>
+                <h2 id="signup-title">Create your GLOHQ profile.</h2>
+              </div>
+            </div>
+            <p class="section-copy">
+              FAMZ accounts are for exploring, collecting, reacting, commenting, sharing, and tapping into creators,
+              rooms, and drops across the mansion.
+            </p>
+          </div>
+          <form class="profile-form" id="famzSignupForm">
+            <div class="form-grid">
+              <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+              <label>Password<input name="password" type="password" autocomplete="new-password" minlength="8" required /></label>
+              <label>Username<input name="username" maxlength="18" placeholder="@handle" required /></label>
+              <label>Display name<input name="displayName" maxlength="18" required /></label>
+              <label>Profile photo<input name="profilePhoto" type="file" accept="image/*" /></label>
+              <label>Banner image<input name="bannerImage" type="file" accept="image/*" /></label>
+            </div>
+            <label>Bio<textarea name="bio" maxlength="275" placeholder="275 characters max"></textarea></label>
+            <label>Instagram @<input name="instagram" placeholder="@yourname" /></label>
+            <fieldset class="interest-grid">
+              <legend>Interests</legend>
+              <label><input type="checkbox" name="interests" value="Music" />Music</label>
+              <label><input type="checkbox" name="interests" value="Visuals" />Visuals</label>
+              <label><input type="checkbox" name="interests" value="Art" />Art</label>
+              <label><input type="checkbox" name="interests" value="Collectibles" />Collectibles</label>
+              <label><input type="checkbox" name="interests" value="Animation" />Animation</label>
+              <label><input type="checkbox" name="interests" value="Tools & Apps" />Tools & Apps</label>
+              <label><input type="checkbox" name="interests" value="Games" />Games</label>
+              <label><input type="checkbox" name="interests" value="Movies & Shows" />Movies & Shows</label>
+              <label><input type="checkbox" name="interests" value="Sports" />Sports</label>
+              <label><input type="checkbox" id="otherInterestToggle" name="interests" value="Other" />Other</label>
+            </fieldset>
+            <label class="other-interest" id="otherInterestField">Other interest<input name="otherInterest" /></label>
+            <label class="creator-check">
+              <input type="checkbox" name="creatorWaitlist" />
+              Join the Co-Lab as an Artist or Creator
+            </label>
+            <button class="primary-cta" type="submit"><img src="./assets/icons/profile.png" alt="" />Create FAMZ Profile</button>
+            <p class="feed-status" id="signupStatus">FAMZ signup ready.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="app-launcher section-band" aria-labelledby="launcher-title">
+        <div class="section-shell">
+          <div class="section-heading icon-heading">
+            <img src="./assets/icons/home.png" alt="" />
+            <div>
+              <p class="eyebrow">Platform Launcher</p>
+              <h2 id="launcher-title">Official DC52 icon language.</h2>
+            </div>
+          </div>
+          <div class="launcher-grid" aria-label="DC52 platform icons">
+            <a href="#hero"><img src="./assets/icons/home.png" alt="" /><span>Home</span></a>
+            <a href="#deck"><img src="./assets/icons/discover.png" alt="" /><span>Discover</span></a>
+            <a href="#cards"><img src="./assets/icons/collection.png" alt="" /><span>Collections</span></a>
+            <a href="#vault"><img src="./assets/icons/famz.png" alt="" /><span>Famz</span></a>
+            <a href="#sound"><img src="./assets/icons/glotapeicon.png" alt="" /><span>GLO-Tapes</span></a>
+            <a href="#future"><img src="./assets/icons/battledeck.png" alt="" /><span>BattleDeck</span></a>
+            <a href="#sound"><img src="./assets/icons/gloradio.png" alt="" /><span>GLO-Radio</span></a>
+            <a href="#legacy"><img src="./assets/icons/settings.png" alt="" /><span>Tools</span></a>
+            <a href="#vault"><img src="./assets/icons/messages.png" alt="" /><span>Messages</span></a>
+            <a href="#future"><img src="./assets/icons/xp.png" alt="" /><span>XP</span></a>
+            <a href="#enter"><img src="./assets/icons/shop.png" alt="" /><span>Shop</span></a>
+            <a href="#enter"><img src="./assets/icons/profile.png" alt="" /><span>Profile</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck-grid section-band" id="deck" aria-labelledby="deck-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="eyebrow">The Deck</p>
+            <h2 id="deck-title">Choose a lane.</h2>
+          </div>
+          <div class="tile-grid" aria-label="Deck category links">
+            <a class="deck-tile tile-cards" href="#cards">
+              <img class="tile-icon" src="./assets/icons/collection.png" alt="" />
+              <strong>Cards</strong>
+              <small>Genesis Packs, Forefathers, artist cards, GLO-Decks.</small>
+            </a>
+            <a class="deck-tile tile-sound" href="#sound">
+              <img class="tile-icon" src="./assets/icons/glotapeicon.png" alt="" />
+              <strong>Music</strong>
+              <small>GLO-Tapes&trade;, MetaMixtapes&trade;, Mix-Keys&trade;, radio.</small>
+            </a>
+            <a class="deck-tile tile-comics" href="#origin">
+              <img class="tile-icon" src="./assets/icons/dropkey.png" alt="" />
+              <strong>Comics</strong>
+              <small>Panel energy, origin arcs, future worlds.</small>
+            </a>
+            <a class="deck-tile tile-games" href="#future">
+              <img class="tile-icon" src="./assets/icons/battledeck.png" alt="" />
+              <strong>Games</strong>
+              <small>BattleDeck&trade; and connected experiences.</small>
+            </a>
+            <a class="deck-tile tile-tools" href="#legacy">
+              <img class="tile-icon" src="./assets/icons/settings.png" alt="" />
+              <strong>Creator Tools</strong>
+              <small>GLOHQ&trade;, SupaMaster&trade;, BeatBayngr&trade;, SupaVOX&trade;.</small>
+            </a>
+            <a class="deck-tile tile-community" href="#vault">
+              <img class="tile-icon" src="./assets/icons/famz.png" alt="" />
+              <strong>Community</strong>
+              <small>The Vault&trade; and trusted community outposts.</small>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="clubtags section-band" id="clubtags" aria-labelledby="clubtags-title">
+        <div class="section-shell two-column">
+          <div>
+            <div class="section-heading icon-heading compact-heading">
+              <img src="./assets/icons/clubtag.png" alt="" />
+              <div>
+                <p class="eyebrow">ClubTag&trade;</p>
+                <h2 id="clubtags-title">Not a hashtag. A DC52 signal.</h2>
+              </div>
+            </div>
+            <p class="section-copy">
+              ClubTag&trade; behaves like a hashtag for search, discovery, filtered feeds, category views, and trending
+              systems, while carrying the platform identity.
+            </p>
+          </div>
+          <div class="clubtag-demo">
+            <div class="composer-toolbar">
+              <button class="tag-button" type="button" id="insertClubTag">
+                <img src="./assets/icons/clubtag.png" alt="" />
+                <span>Tag</span>
+              </button>
+              <span>Tap Tag, then type.</span>
+            </div>
+            <div
+              class="composer-input"
+              id="clubtagComposer"
+              contenteditable="true"
+              role="textbox"
+              aria-label="ClubTag composer"
+              spellcheck="false"
+            ></div>
+            <div class="tag-feed" aria-label="Example ClubTags">
+              <button type="button" data-clubtag="Music"><img src="./assets/icons/clubtag.png" alt="" />Music</button>
+              <button type="button" data-clubtag="HipHop"><img src="./assets/icons/clubtag.png" alt="" />HipHop</button>
+              <button type="button" data-clubtag="Gaming"><img src="./assets/icons/clubtag.png" alt="" />Gaming</button>
+            </div>
+            <p class="feed-status" id="feedStatus">Discovery feed ready.</p>
+            <div class="clubtag-results" id="clubtagResults" hidden></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="origin section-band" id="origin" aria-labelledby="origin-title">
+        <div class="section-shell two-column">
+          <div>
+            <p class="eyebrow">Origin</p>
+            <h2 id="origin-title">Built from a lifetime love of the culture that made us collect, create, and replay.</h2>
+          </div>
+          <div class="origin-stack" aria-label="Origin pillars">
+            <span>Collecting.</span>
+            <span>Creating.</span>
+            <span>Music.</span>
+            <span>Games.</span>
+            <span>Comics.</span>
+            <span>Technology.</span>
+            <span>Culture.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase section-band" id="cards" aria-labelledby="cards-title">
+        <div class="section-shell">
+          <div class="section-heading icon-heading">
+            <img src="./assets/icons/collection.png" alt="" />
+            <div>
+              <p class="eyebrow">Cards & Collectibles</p>
+              <h2 id="cards-title">Collector-grade presentation for the drops that define the deck.</h2>
+            </div>
+          </div>
+          <div class="collector-layout">
+            <article class="feature-slab">
+              <img src="./assets/icons/dropkey.png" alt="" />
+              <span class="slab-number">01</span>
+              <h3>Genesis Packs</h3>
+              <p>The opening signal. Premium pack energy for the first waves of DC52 collectibles.</p>
+            </article>
+            <article class="feature-slab">
+              <img src="./assets/icons/trophy.png" alt="" />
+              <span class="slab-number">02</span>
+              <h3>Forefathers</h3>
+              <p>Foundation cards honoring the creative forces and cultural references that built the lane.</p>
+            </article>
+            <article class="feature-slab">
+              <img src="./assets/icons/profile.png" alt="" />
+              <span class="slab-number">03</span>
+              <h3>Artist Cards</h3>
+              <p>Creator-focused presentation built for identity, catalog moments, and collectible storytelling.</p>
+            </article>
+            <article class="feature-slab">
+              <img src="./assets/icons/vip.png" alt="" />
+              <span class="slab-number">04</span>
+              <h3>GLO-Decks</h3>
+              <p>Curated decks that connect cards, music, visuals, and future interactive layers.</p>
+            </article>
+            <article class="feature-slab wide-slab">
+              <img src="./assets/icons/shop.png" alt="" />
+              <span class="slab-number">05</span>
+              <h3>Future Drops</h3>
+              <p>New formats, special editions, and culture-first releases without fake storefront buttons or empty promises.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sound section-band" id="sound" aria-labelledby="sound-title">
+        <div class="section-shell">
+          <div class="section-heading icon-heading">
+            <img src="./assets/icons/glotapeicon.png" alt="" />
+            <div>
+              <p class="eyebrow">Sound Of The Deck</p>
+              <h2 id="sound-title">Music and media built like collectibles.</h2>
+            </div>
+          </div>
+          <div class="lane-grid">
+            <article class="lane-card">
+              <img src="./assets/icons/glotapeicon.png" alt="" />
+              <h3>DC52 Artist Music</h3>
+              <p>Official artist releases and culture signals from inside the ecosystem.</p>
+            </article>
+            <article class="lane-card highlight-lane">
+              <img src="./assets/icons/glotapeicon.png" alt="" />
+              <h3>GLO-Tapes&trade;</h3>
+              <p>A collectible music format combining music, animation, and artist-card presentation.</p>
+            </article>
+            <article class="lane-card">
+              <img src="./assets/icons/messages.png" alt="" />
+              <h3>Co-Lab Tracks&trade;</h3>
+              <p>Coming Soon</p>
+            </article>
+            <article class="lane-card">
+              <img src="./assets/icons/mixkey.png" alt="" />
+              <h3>Mix-Keys&trade;</h3>
+              <p>Creative reinterpretations inspired by the cartoons, anime, games, movies, and characters that shaped generations.</p>
+            </article>
+            <article class="lane-card">
+              <img src="./assets/icons/dropkey.png" alt="" />
+              <h3>MetaMixtapes&trade;</h3>
+              <p>Culture remix energy shaped into collectible listening lanes and visual worlds.</p>
+            </article>
+            <article class="lane-card">
+              <img src="./assets/icons/gloradio.png" alt="" />
+              <h3>GLO-Deck Radio&trade;</h3>
+              <p>Coming Soon</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="legacy section-band" id="legacy" aria-labelledby="legacy-title">
+        <div class="section-shell two-column">
+          <div>
+            <div class="section-heading icon-heading compact-heading">
+              <img src="./assets/icons/settings.png" alt="" />
+              <div>
+                <p class="eyebrow">Build Your Legacy</p>
+                <h2 id="legacy-title">Creator tools for turning raw culture into finished signals.</h2>
+              </div>
+            </div>
+            <p class="section-copy">
+              GLOHQ&trade; is the creative command center. These are not generic software products. They are tools for
+              making, polishing, voicing, releasing, and expanding the universe.
+            </p>
+          </div>
+          <div class="tool-stack">
+            <article><img src="./assets/icons/vaultlogo.png" alt="" /><strong>GLOHQ&trade;</strong><span>Creator command center</span></article>
+            <article><img src="./assets/icons/stats.png" alt="" /><strong>SupaMaster&trade;</strong><span>Finishing and polish lane</span></article>
+            <article><img src="./assets/icons/glotapeicon.png" alt="" /><strong>BeatBayngr&trade;</strong><span>Music creation energy</span></article>
+            <article><img src="./assets/icons/messages.png" alt="" /><strong>SupaVOX&trade;</strong><span>Voice and media tools</span></article>
+            <article><img src="./assets/icons/settings.png" alt="" /><strong>Future Tools</strong><span>Expansion-ready creator systems</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="vault section-band" id="vault" aria-labelledby="vault-title">
+        <div class="section-shell vault-shell">
+          <div>
+            <div class="section-heading icon-heading compact-heading">
+              <img src="./assets/icons/vaultlogo.png" alt="" />
+              <div>
+                <p class="eyebrow">The Vault&trade;</p>
+                <h2 id="vault-title">The official community destination.</h2>
+              </div>
+            </div>
+            <p class="section-copy">
+              The Vault&trade; is the primary community hub for the DC52 universe. Discord, Facebook Group, and Telegram
+              are outposts. The future custom forum platform is the destination.
+            </p>
+          </div>
+          <div class="outpost-grid" aria-label="Community outposts">
+            <span><img src="./assets/icons/messages.png" alt="" />Discord</span>
+            <span><img src="./assets/icons/famz.png" alt="" />Facebook Group</span>
+            <span><img src="./assets/icons/notis.png" alt="" />Telegram</span>
+            <span><img src="./assets/icons/vaultlogo.png" alt="" />Future Forum</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="goat-room section-band room-panel" id="goat" aria-labelledby="goat-title">
+        <div class="section-shell">
+          <div class="section-heading icon-heading">
+            <img src="./assets/icons/battledeck.png" alt="" />
+            <div>
+              <p class="eyebrow">GOAT Conversations</p>
+              <h2 id="goat-title">A 24-hour hip hop debate arena.</h2>
+            </div>
+          </div>
+          <div class="arena-stage">
+            <article class="glotape-slot">
+              <span>GLOTape A</span>
+              <strong>Queued by Admin</strong>
+              <p>Tidbits, linked songs, reactions, votes, comments, and share actions live here when a matchup drops.</p>
+            </article>
+            <div class="arena-core">
+              <strong>VS</strong>
+              <span id="arenaCountdown">Queue waiting</span>
+            </div>
+            <article class="glotape-slot">
+              <span>GLOTape B</span>
+              <strong>Queued by Admin</strong>
+              <p>Each matchup runs 24 hours, locks votes, archives results, then resets the room for the next drop.</p>
+            </article>
+          </div>
+          <div class="reaction-row" aria-label="Matchup reactions">
+                <button type="button" data-react="fire"><img src="./assets/icons/glofirereact.png" alt="" />Fire</button>
+                <button type="button" data-react="rocket"><img src="./assets/icons/rocketreaction.png" alt="" />Rocket</button>
+            <button type="button" data-share-room="GOAT Conversations"><img src="./assets/icons/messages.png" alt="" />Share</button>
+          </div>
+          <div class="conversation-panel" aria-label="GOAT Conversations chat preview">
+            <div class="chat-feed" id="goatChatFeed">
+              <article><strong>Ripkanos</strong><span>First came hip hop... then came the collection!</span></article>
+            </div>
+            <form class="chat-form" id="goatChatForm">
+              <input name="message" maxlength="180" placeholder="Join the debate..." />
+              <button type="submit"><img src="./assets/icons/messages.png" alt="" />Post</button>
+            </form>
+          </div>
+          <form class="arena-admin" id="matchupBuilder">
+            <p class="eyebrow">Admin Matchup Builder</p>
+            <div class="form-grid">
+              <label>Matchup title<input name="matchupTitle" placeholder="Who owns the moment?" /></label>
+              <label>Publish date/time<input name="publishAt" type="datetime-local" /></label>
+              <label>GLOTape A<input name="glotapeA" type="file" accept="image/*,video/*" /></label>
+              <label>GLOTape B<input name="glotapeB" type="file" accept="image/*,video/*" /></label>
+            </div>
+            <label>Debate setup<textarea name="debateSetup" maxlength="420"></textarea></label>
+            <div class="confirm-flow">
+              <button type="button" data-builder-action="edit">Edit</button>
+              <button type="button" data-builder-action="save">Save</button>
+              <button type="button" data-builder-action="confirm">Confirm</button>
+            </div>
+            <p class="feed-status" id="matchupStatus">Builder locked until admin login.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="profile-admin section-band" id="admin" aria-labelledby="admin-title">
+        <div class="section-shell two-column">
+          <div>
+            <div class="section-heading icon-heading compact-heading">
+              <img src="./assets/icons/vip.png" alt="" />
+              <div>
+                <p class="eyebrow">Owner/Admin</p>
+                <h2 id="admin-title">Mobile-first HQ control.</h2>
+              </div>
+            </div>
+            <p class="section-copy">
+              Admin access is separate from public FAMZ signup. Uploads, room management, moderation, publishing,
+              archiving, and destructive actions stay inside the protected HQ flow.
+            </p>
+          </div>
+          <form class="admin-card" id="adminLoginForm">
+            <label>Admin email<input name="adminEmail" type="email" autocomplete="email" required /></label>
+            <label>Password<input name="adminPassword" type="password" autocomplete="current-password" required /></label>
+            <button class="primary-cta" type="submit"><img src="./assets/icons/vip.png" alt="" />Enter Admin HQ</button>
+            <p class="feed-status" id="adminStatus">Primary admin login: deckcadence52@gmail.com</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="future section-band" id="future" aria-labelledby="future-title">
+        <div class="section-shell">
+          <div class="section-heading icon-heading">
+            <img src="./assets/icons/battledeck.png" alt="" />
+            <div>
+              <p class="eyebrow">Future Of The Deck</p>
+              <h2 id="future-title">Expansion without fake functionality.</h2>
+            </div>
+          </div>
+          <div class="future-row">
+            <article><img src="./assets/icons/battledeck.png" alt="" /><strong>BattleDeck&trade;</strong><span>Coming Soon</span></article>
+            <article><img src="./assets/icons/messages.png" alt="" /><strong>Co-Lab&trade;</strong><span>Coming Soon</span></article>
+            <article><img src="./assets/icons/gloradio.png" alt="" /><strong>GLO-Deck Radio&trade;</strong><span>Coming Soon</span></article>
+            <article><img src="./assets/icons/xp.png" alt="" /><strong>Future Experiences</strong><span>In development</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="enter section-band" id="enter" aria-labelledby="enter-title">
+        <div class="section-shell">
+          <p class="eyebrow">Enter The Deck</p>
+          <h2 id="enter-title">Pick your path.</h2>
+          <div class="path-grid">
+            <a href="#cards"><img src="./assets/icons/collection.png" alt="" />Collect</a>
+            <a href="#sound"><img src="./assets/icons/glotapeicon.png" alt="" />Listen</a>
+            <a href="#legacy"><img src="./assets/icons/settings.png" alt="" />Create</a>
+            <a href="#vault"><img src="./assets/icons/famz.png" alt="" />Connect</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <strong>Deckcadence52&trade;</strong>
+        <span>Where Legends Are Already Dealt.</span>
+        <span>Collectibles & Culture. Powered by GLOKEY&trade;.</span>
+      </div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="#hero">DC52&trade;</a>
+        <a href="#legacy">GLOHQ&trade;</a>
+        <a href="#vault">The Vault&trade;</a>
+        <a href="#future">Co-Lab&trade;</a>
+        <a href="#future">BattleDeck&trade;</a>
+        <a href="#sound">GLO-Deck Radio&trade;</a>
+      </div>
+      <div class="social-row" aria-label="Social and community links">
+        <a href="#vault"><img src="./assets/icons/messages.png" alt="" />Discord</a>
+        <a href="#vault"><img src="./assets/icons/famz.png" alt="" />Facebook</a>
+        <a href="#vault"><img src="./assets/icons/notis.png" alt="" />Telegram</a>
+        <a href="#enter"><img src="./assets/icons/home.png" alt="" />HQ</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

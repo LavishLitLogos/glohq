@@ -1,0 +1,27 @@
+{
+  "name": "GLOHQ - Deckcadence52 HQ",
+  "short_name": "GLOHQ",
+  "description": "The premium PWA headquarters for Deckcadence52, FAMZ, creators, ClubTags, GLO-Tapes, and culture powered by GLOKEY.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#050507",
+  "theme_color": "#050507",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "music", "social", "games"],
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/vaultlogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
