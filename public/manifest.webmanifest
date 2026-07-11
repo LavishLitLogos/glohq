@@ -1,0 +1,25 @@
+{
+  "name": "GLOHQ",
+  "short_name": "GLOHQ",
+  "description": "The public HQ for Deckcadence52 collectibles, culture, GLOTapes, MixKeys, FAMZ, and ClubTag discovery.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050507",
+  "theme_color": "#050507",
+  "icons": [
+    {
+      "src": "/assets/icons/officialglohqlogo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/vaultlogo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

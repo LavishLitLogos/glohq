@@ -1,0 +1,14 @@
+{
+  "name": "glohq-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GLOHQ installable PWA with server-side sessions, roles, media routing, and app state.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

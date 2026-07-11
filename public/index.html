@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#050507" />
+    <meta name="description" content="GLOHQ, the public headquarters for Deckcadence52 collectibles and culture." />
+    <title>GLOHQ | Deckcadence52</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="splash" id="splash" aria-hidden="true">
+      <div class="splash-ring"></div>
+      <img src="/assets/icons/vaultlogo.png" alt="" />
+      <strong>GLOHQ</strong>
+    </div>
+
+    <aside class="ripkanos" id="ripkanos" aria-live="polite" aria-hidden="true">
+      <img src="/assets/icons/ripkanos.svg" alt="" />
+      <p id="ripkanosLine"></p>
+    </aside>
+
+    <div class="app-shell">
+      <header class="app-topbar">
+        <button class="icon-button" data-route="home" aria-label="GLOHQ home">
+          <img src="/assets/icons/vaultlogo.png" alt="" />
+        </button>
+        <div class="brand">
+          <strong>GLOHQ</strong>
+          <span>Deckcadence52 HQ</span>
+        </div>
+        <button class="install-button" id="installButton" hidden>Install</button>
+        <button class="session-button" id="sessionButton">Login</button>
+      </header>
+
+      <main class="screen-frame" id="screenFrame" tabindex="-1"></main>
+
+      <nav class="bottom-nav" aria-label="GLOHQ app navigation">
+        <button data-route="home"><img src="/assets/icons/home.png" alt="" /><span>Home</span></button>
+        <button data-route="discover"><img src="/assets/icons/discover.png" alt="" /><span>Discover</span></button>
+        <button data-route="sound"><img src="/assets/icons/glotapeicon.png" alt="" /><span>Sound</span></button>
+        <button data-route="mixkeys"><img src="/assets/icons/mixkeyicon.png" alt="" /><span>MixKeys</span></button>
+        <button data-route="famz"><img src="/assets/icons/famz.png" alt="" /><span>FAMZ</span></button>
+        <button data-route="profile"><img src="/assets/icons/profile.png" alt="" /><span>Profile</span></button>
+      </nav>
+    </div>
+
+    <div class="player-dock" id="playerDock" hidden>
+      <div>
+        <strong id="nowPlaying">No track selected</strong>
+        <span id="nowMeta">GLOHQ Sound System</span>
+      </div>
+      <audio id="audioPlayer" preload="metadata"></audio>
+      <video id="videoPlayer" playsinline controls hidden></video>
+      <div class="transport">
+        <button id="playPause" aria-label="Play or pause"><img src="/assets/icons/play-icon.svg" alt="" /></button>
+        <input id="scrubber" type="range" min="0" max="100" value="0" aria-label="Track position" />
+        <button id="nextTrack" aria-label="Next"><img src="/assets/icons/skip-icon.svg" alt="" /></button>
+        <button id="muteTrack" aria-label="Mute"><img src="/assets/icons/offswitch.png" alt="" /></button>
+      </div>
+    </div>
+
+    <dialog class="auth-dialog" id="authDialog">
+      <form method="dialog" class="auth-panel">
+        <button class="close-button" value="cancel" aria-label="Close">x</button>
+        <img src="/assets/icons/profile.png" alt="" />
+        <h2>Tap Into GLOHQ</h2>
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="is-active" data-auth-mode="login">Login</button>
+          <button type="button" data-auth-mode="signup">Sign Up</button>
+        </div>
+        <label>Email<input id="authEmail" type="email" autocomplete="email" required /></label>
+        <label>Password<input id="authPassword" type="password" autocomplete="current-password" minlength="8" required /></label>
+        <div class="signup-fields" id="signupFields" hidden>
+          <label>@ Handle<input id="authUsername" maxlength="18" /></label>
+          <label>Display Name<input id="authDisplayName" maxlength="18" /></label>
+        </div>
+        <button class="primary-action" type="button" id="authSubmit">Continue</button>
+        <p class="status-line" id="authStatus"></p>
+      </form>
+    </dialog>
+
+    <dialog class="media-dialog" id="mediaDialog">
+      <form method="dialog">
+        <button class="close-button" value="cancel" aria-label="Close">x</button>
+      </form>
+      <div id="mediaDialogBody"></div>
+    </dialog>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
